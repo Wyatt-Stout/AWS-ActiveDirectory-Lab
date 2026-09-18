@@ -17,3 +17,8 @@ To support high availability and isolate infrastructure, two subnets were create
   * **Zone:** us-east-2b
   * **CIDR:** 10.0.2.0/24
   * **Subnet ID:** subnet-09030fc84c634d4a8
+
+## 3. Firewall Primitives (Security Groups)
+* **Security Group Name:** Domain-Controller-SG
+* **Security Group ID:** sg-0bf0a06ebaa6d7af5
+* **Security Strategy:** Applied least-privilege access rules. RDP inbound access (Port 3389) is strictly locked to my home public IP address to prevent brute-force network attacks.
