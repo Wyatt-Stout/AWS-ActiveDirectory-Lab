@@ -36,3 +36,14 @@
     1.  Bypassed the log history and queried active system shares directly via the command line utilizing the `net share` instruction.
     2.  Confirmed that both critical enterprise folder namespaces `SYSVOL` and `NETLOGON` are actively shared, reachable, and reporting a healthy initialization state.
 *   **Status:** Resolved. Confirmed false positive; directory replication health is green.
+
+## Ticket #1007: Administrative Strategy Shift - OS Desktop Licensing Constraints
+*   **User/Severity:** Project Deployment | Low
+*   **Symptom:** Attempting to provision a native Windows 11 client image (`Workstation-01`) within the standard AWS EC2 public catalog returned no matching templates, displaying only Server Base images.
+*   **Root Cause Analysis:** Cloud provider licensing boundaries. Due to Microsoft Volume Licensing rules and multi-tenant cloud restrictions, consumer client operating systems (Windows 10/11) are restricted from standard shared public EC2 clusters. 
+*   **Helpdesk Resolution Strategy:**
+    1.  Substituted the consumer-tier image with an additional **Microsoft Windows Server 2022 Base** instance.
+    2.  Pivoted deployment strategy to utilize the server operating system as a simulated client node framework.
+    3.  Routed the new machine into `Private-Subnet-2b` (us-east-2b) to fully validate multi-availability zone domain interaction capability.
+*   **Status:** Resolved. Next node provisioning underway.
+
