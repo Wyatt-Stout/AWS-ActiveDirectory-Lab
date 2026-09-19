@@ -11,3 +11,10 @@
 * **Compute Tier:** t3.medium (2 vCPUs, 4 GiB RAM)
 * **Network Placement:** Target VPC: `DomainLab-VPC` | Target Subnet: `Private-Subnet-2a` (us-east-2a)
 * **Instance ID:** i-0457de0e6be1b5564
+
+## 4. Active Directory Forest Promotion
+* **Deployment Schema:** Add a New Forest Root
+* **Root Domain Name (FQDN):** activedirectorylab.local
+* **Functional Level Compatibility:** Windows Server 2016
+* **Backdoor Recovery:** Set and archived a unique Directory Services Restore Mode (DSRM) credential block.
+
