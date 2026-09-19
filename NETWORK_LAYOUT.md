@@ -8,7 +8,7 @@
 ## 2. Subnet Configurations
 To support high availability and isolate infrastructure, two subnets were created across separate physical data centers:
 
-* **Subnet Name:** Private-Subnet-2b
+* **Subnet Name:** Private-Subnet-2a
   * **Zone:** us-east-2a
   * **CIDR:** 10.0.1.0/24
   * **Subnet ID:** subnet-0c6efeeba3e24c42a
