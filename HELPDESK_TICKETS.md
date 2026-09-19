@@ -18,3 +18,13 @@
     3.  **Security Group Inspection:** Validated that the `Domain-Controller-SG` inbound firewall rules strictly permitted TCP Port 3389 (RDP) from my local public IP address.
 *   **Status:** Resolved. Secure administrative access to the Windows Server desktop was successfully established.
 
+## Ticket #1002: Unexpected Session Drop and RDP Failure Post-Promotion
+*   **User/Severity:** Administrative System | Medium
+*   **Symptom:** Immediately following the promotion phase, the active Remote Desktop connection froze and abruptly disconnected, rejecting initial reconnect attempts.
+*   **Root Cause Analysis:** Expected operating system behavior. Upon completing a New Forest promotion, Windows Server executes an immediate forced reboot to transform the local Security Accounts Manager (SAM) database into the Active Directory database (NTDS.dit).
+*   **Resolution Steps:**
+    1.  Monitored the AWS EC2 Status Checks until the instance returned a healthy `2/2 checks passed` state.
+    2.  Cleared cached local credentials from the Remote Desktop Client.
+    3.  Modified login credentials to utilize the domain NetBIOS prefix (`ACTIVEDIRECTORYLAB\Administrator`) to authenticate against the newly initialized domain landscape rather than the local machine.
+*   **Status:** Resolved.
+
