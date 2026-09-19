@@ -25,12 +25,12 @@
 
 ## 5. Domain Identity & Validation
 * **Primary Domain Name (FQDN):** activedirectorylab.local
-* **NetBIOS Domain Name:** HELPDESKLAB
+* **NetBIOS Domain Name:** ACTIVEDIRECTORYLAB
 * **Verification Protocol:** Executed PowerShell ActiveDirectory Domain classes to confirm the schema namespace matches the intended design specifications.
 
 ## 6. Post-Promotion Infrastructure Verification
 *   **Operating Status:** Successful Integration
-*   **System Identity:** The server successfully transitioned from a standalone workgroup asset to the primary root Domain Controller for `activediretorylab.local`.
+*   **System Identity:** The server successfully transitioned from a standalone workgroup asset to the primary root Domain Controller for `activedirectorylab.local`.
 *   **Access Validation:** Administrative access verified via RDP utilizing the explicit enterprise security principal: `ACTIVEDIRECTORYLAB\Administrator`.
 *   **Active Directory Database Integrity:** Confirmed database generation (NTDS.dit) and system access pathways are online and responding locally.
 
